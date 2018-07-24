@@ -1,0 +1,9 @@
+.#{$global-utility-name}float {
+  &-l {
+    float: left !important;
+  }
+
+  &-r {
+    float: right !important;
+  }
+}

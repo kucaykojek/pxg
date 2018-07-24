@@ -1,0 +1,22 @@
+$global-component-name: 'c-';
+$global-page-name: 'p-';
+$global-utility-name: 'u-';
+
+// sass-lint:disable-all
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,700,700i');
+// sass-lint:enable-all
+
+$global-font-family: 'Cabin', Helvetica, Arial, sans-serif;
+
+$global-font-size:    14px !default;
+$global-font-weight:  400 !default;
+$global-line-height:  1.2 !default;
+
+$global-bg-color: #f8f5ed;
+$global-bg-color-darker: #eae0c8;
+$global-fg-color: #333;
+$global-fg-color-lighter: #999;
+
+// If we have included this file, set a variable to tell the rest of the
+// framework that we have some base settings.
+$imported-base-setting: true;

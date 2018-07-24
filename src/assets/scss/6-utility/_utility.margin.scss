@@ -1,0 +1,40 @@
+// Dependency:
+//   - ./1-setting/setting.base
+
+$margin-size-length: 15;
+
+@for $i from 1 through $margin-size-length {
+  $size: $i * 4;
+
+  .#{$global-utility-name}margin {
+    &--#{$size} {
+      margin: #{$size}px !important;
+    }
+
+    &-t--#{$size} {
+      margin-top: #{$size}px !important;
+    }
+
+    &-r--#{$size} {
+      margin-right: #{$size}px !important;
+    }
+
+    &-b--#{$size} {
+      margin-bottom: #{$size}px !important;
+    }
+
+    &-l--#{$size} {
+      margin-left: #{$size}px !important;
+    }
+
+    &-h--#{$size} {
+      margin-left: #{$size}px !important;
+      margin-right: #{$size}px !important;
+    }
+
+    &-v--#{$size} {
+      margin-top: #{$size}px !important;
+      margin-bottom: #{$size}px !important;
+    }
+  }
+}

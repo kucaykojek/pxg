@@ -1,0 +1,25 @@
+{
+  "name": "pxg",
+  "version": "1.0.0",
+  "description": "Pearl X Gems - Admin Template.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "npm run clean && cross-env NODE_ENV=development gulp",
+    "build": "npm run clean && cross-env NODE_ENV=production gulp",
+    "clean": "rimraf public"
+  },
+  "author": "Asep Fajar Nugraha",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "cross-env": "^5.1.4",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "rimraf": "^2.6.2"
+  }
+}

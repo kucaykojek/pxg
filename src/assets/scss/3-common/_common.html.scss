@@ -1,0 +1,25 @@
+html {
+  min-height: 100%;
+
+  font-family: $global-font-family;
+  font-size: ($global-font-size / 16px) * 1em;
+  font-weight: $global-font-weight;
+  line-height: $global-line-height;
+
+  background-color: $global-bg-color;
+  color: $global-fg-color;
+
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100%;
+}
