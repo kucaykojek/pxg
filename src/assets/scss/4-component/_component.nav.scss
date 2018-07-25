@@ -1,0 +1,64 @@
+$nav-default-width: 56px;
+$nav-full-width: 240px;
+
+.#{$global-component-name}nav {
+  $nav-class: & !default;
+
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: $nav-full-width;
+  height: 100%;
+  background: $color-pearl-lighter;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, .2);
+
+  &::before {
+    position: fixed;
+    z-index: -1;
+    width: $nav-default-width;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: " ";
+    background: rgb(224, 17, 95);
+    background: -moz-linear-gradient(0deg, rgba(224, 17, 95, 1) 0%, rgba(247, 64, 133, 1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(224, 17, 95, 1) 0%, rgba(247, 64, 133, 1) 100%);
+    background: linear-gradient(0deg, rgba(224, 17, 95, 1) 0%, rgba(247, 64, 133, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e0115f",endColorstr="#f74085",GradientType=1);
+  }
+
+  &__icon {
+    width: $nav-default-width;
+    color: $color-pearl-lighter;
+    font-size: rem-calc(20px);
+    text-align: center;
+  }
+
+  &__title {
+    @include padding(5, 'left' 'right');
+  }
+
+  > ul {
+    position: relative;
+    z-index: 1;
+
+    > li {
+      > a {
+        @include padding(3 0);
+        @include transition('background', .8s, 'ease');
+
+        position: relative;
+        display: block;
+        display: flex;
+        align-items: center;
+        background: transparent;
+
+        &.active,
+        &:hover {
+          background: rgba($color-white, .3);
+        }
+      }
+    }
+  }
+}

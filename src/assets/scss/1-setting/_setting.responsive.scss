@@ -1,0 +1,17 @@
+$screen: 'only screen';
+
+$breakpoints: (
+  'small'           '#{$screen}',
+  'smartphone'      '#{$screen} and (min-width: 300px)',
+  'landscape-phone' '#{$screen} and (min-width: 450px)',
+  'tablet'          '#{$screen} and (min-width: 600px)',
+  'bigger-tablet'   '#{$screen} and (min-width: 750px)',
+  'desktop'         '#{$screen} and (min-width: 900px)',
+  'bigger-desktop'  '#{$screen} and (min-width: 1100px)',
+  'widescreen'      '#{$screen} and (min-width: 1500px)',
+  'retina'       '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)'
+) !default;
+
+// If we have included this file, set a variable to tell the rest of the
+// framework that we have some responsive settings.
+$imported-responsive-setting: true;

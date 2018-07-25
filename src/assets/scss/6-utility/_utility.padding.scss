@@ -1,40 +1,40 @@
 // Dependency:
 //   - ./1-setting/setting.base
 
-$padding-size-length: 15;
+$padding-size-length: $global-spacing-level;
 
 @for $i from 1 through $padding-size-length {
-  $size: $i * 4;
+  // $size: $i * $global-spacing-unit;
 
   .#{$global-utility-name}padding {
-    &--#{$size} {
-      padding: #{$size}px !important;
+    &--#{$i} {
+      @include padding($i, null, '!important');
     }
 
-    &-t--#{$size} {
-      padding-top: #{$size}px !important;
+    &-t--#{$i} {
+      @include padding($i, 'top', '!important');
     }
 
-    &-r--#{$size} {
-      padding-right: #{$size}px !important;
+    &-r--#{$i} {
+      @include padding($i, 'right', '!important');
     }
 
-    &-b--#{$size} {
-      padding-bottom: #{$size}px !important;
+    &-b--#{$i} {
+      @include padding($i, 'bottom', '!important');
     }
 
-    &-l--#{$size} {
-      padding-left: #{$size}px !important;
+    &-l--#{$i} {
+      @include padding($i, 'left', '!important');
     }
 
-    &-h--#{$size} {
-      padding-left: #{$size}px !important;
-      padding-right: #{$size}px !important;
+    &-h--#{$i} {
+      @include padding($i, 'left', '!important');
+      @include padding($i, 'right', '!important');
     }
 
-    &-v--#{$size} {
-      padding-top: #{$size}px !important;
-      padding-bottom: #{$size}px !important;
+    &-v--#{$i} {
+      @include padding($i, 'top', '!important');
+      @include padding($i, 'bottom', '!important');
     }
   }
 }

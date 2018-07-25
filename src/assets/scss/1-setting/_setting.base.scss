@@ -1,4 +1,5 @@
 $global-component-name: 'c-';
+$global-common-name: 'g-';
 $global-page-name: 'p-';
 $global-utility-name: 'u-';
 
@@ -12,10 +13,10 @@ $global-font-size:    14px !default;
 $global-font-weight:  400 !default;
 $global-line-height:  1.2 !default;
 
-$global-bg-color: #f8f5ed;
-$global-bg-color-darker: #eae0c8;
-$global-fg-color: #333;
-$global-fg-color-lighter: #999;
+$global-spacing-unit: 4px;
+$global-spacing-level: 15;
+
+$support-old-ie: false !default;
 
 // If we have included this file, set a variable to tell the rest of the
 // framework that we have some base settings.

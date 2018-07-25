@@ -1,0 +1,50 @@
+$available-directions: 'top' 'right' 'bottom' 'left';
+
+// assuming $global-spacing-unit is 4px;
+// @include margin(1) -> margin: 4px;
+// @include margin(1 2) -> margin: 4px 8px;
+// @include margin(2, 'top') -> margin-top: 8px;
+// @include margin(2, ('top', 'right')) -> margin-top: 8px; margin-right: 8px;
+
+@function whitespace-values($levels) {
+  $values: null;
+  $counter: 1;
+
+  @each $level in $levels {
+    @if($level < 0 or $level > $global-spacing-level) {
+      $level: 1;
+    }
+
+    @if($counter < 5) {
+      $values: append($values, rem-calc($level * $global-spacing-unit));
+    }
+
+    $counter: $counter + 1;
+  }
+
+  @return $values;
+}
+
+@mixin margin($levels, $directions: null, $important: '') {
+  @if($directions == null) {
+    margin: whitespace-values($levels) #{$important};
+  } @else {
+    @each $direction in $directions {
+      @if(index($available-directions, $direction)) {
+        margin-#{$direction}: rem-calc(nth($levels, 1) * $global-spacing-unit) #{$important};
+      }
+    }
+  }
+}
+
+@mixin padding($levels, $directions: null, $important: '') {
+  @if($directions == null) {
+    padding: whitespace-values($levels) #{$important};
+  } @else {
+    @each $direction in $directions {
+      @if(index($available-directions, $direction)) {
+        padding-#{$direction}: rem-calc(nth($levels, 1) * $global-spacing-unit) #{$important};
+      }
+    }
+  }
+}

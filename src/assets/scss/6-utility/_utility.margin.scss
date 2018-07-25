@@ -1,40 +1,40 @@
 // Dependency:
 //   - ./1-setting/setting.base
 
-$margin-size-length: 15;
+$margin-size-length: $global-spacing-level;
 
 @for $i from 1 through $margin-size-length {
-  $size: $i * 4;
+  // $size: $i * $global-spacing-unit;
 
   .#{$global-utility-name}margin {
-    &--#{$size} {
-      margin: #{$size}px !important;
+    &--#{$i} {
+      @include margin($i, null, '!important');
     }
 
-    &-t--#{$size} {
-      margin-top: #{$size}px !important;
+    &-t--#{$i} {
+      @include margin($i, 'top', '!important');
     }
 
-    &-r--#{$size} {
-      margin-right: #{$size}px !important;
+    &-r--#{$i} {
+      @include margin($i, 'right', '!important');
     }
 
-    &-b--#{$size} {
-      margin-bottom: #{$size}px !important;
+    &-b--#{$i} {
+      @include margin($i, 'bottom', '!important');
     }
 
-    &-l--#{$size} {
-      margin-left: #{$size}px !important;
+    &-l--#{$i} {
+      @include margin($i, 'left', '!important');
     }
 
-    &-h--#{$size} {
-      margin-left: #{$size}px !important;
-      margin-right: #{$size}px !important;
+    &-h--#{$i} {
+      @include margin($i, 'left', '!important');
+      @include margin($i, 'right', '!important');
     }
 
-    &-v--#{$size} {
-      margin-top: #{$size}px !important;
-      margin-bottom: #{$size}px !important;
+    &-v--#{$i} {
+      @include margin($i, 'top', '!important');
+      @include margin($i, 'bottom', '!important');
     }
   }
 }

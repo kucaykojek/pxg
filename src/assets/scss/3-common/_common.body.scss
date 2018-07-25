@@ -6,8 +6,8 @@ html {
   font-weight: $global-font-weight;
   line-height: $global-line-height;
 
-  background-color: $global-bg-color;
-  color: $global-fg-color;
+  background-color: $color-white-darker;
+  color: $color-black-lighter;
 
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
